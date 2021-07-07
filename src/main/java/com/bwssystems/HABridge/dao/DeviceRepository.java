@@ -314,7 +314,7 @@ public class DeviceRepository extends BackupHandler {
 		if(md != null) {
 			md.update(anId.toString().getBytes());
 			byte[] digest = md.digest();
-			theUniqueId = String.format("%s:%s:%s:%s:%s:%s:%s-%s",
+			theUniqueId = String.format("00:%s:%s:%s:%s:%s:%s:%s-%s",
 				HexLibrary.encodeHexString(digest).substring(0, 2),
 				HexLibrary.encodeHexString(digest).substring(2, 4),
 				HexLibrary.encodeHexString(digest).substring(4, 6),
